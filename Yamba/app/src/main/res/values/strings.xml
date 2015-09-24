@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Yamba</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="status_button_tweet">Publicar</string>
+    <string name="status_text_hint">¿Que hay de nuevo?</string>
+    <string name="tweet">Tweet</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="username_summary">¿Como haces log in?</string>
+    <string name="status_update">Actualizacion de estado</string>
+
+</resources>
