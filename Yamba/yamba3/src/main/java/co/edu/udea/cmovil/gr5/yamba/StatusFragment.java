@@ -24,8 +24,6 @@ import com.thenewcircle.yamba.client.YambaClient;
 /**
  * A simple {@link Fragment} subclass.
  */
-
-
 public class StatusFragment extends Fragment {
     //instancias
     private static String TAG = StatusActivity.class.getSimpleName();
@@ -71,7 +69,7 @@ public class StatusFragment extends Fragment {
                 Log.d(TAG, "onClicked");
                 InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
-
+                mTextStatus.setText("");
             }
         });
 
@@ -83,7 +81,6 @@ public class StatusFragment extends Fragment {
 
                 numCaracteres = 140 - s.length();
                 cambiaContador(numCaracteres);
-
             }
 
             @Override
@@ -105,12 +102,8 @@ public class StatusFragment extends Fragment {
         return v;
     }
 
-    void limpiaTexto(){
-        mTextStatus.setText("");
-    }
 
-
-    private void cambiaContador(int count){
+    void cambiaContador(int count){
 
         mTextCount.setText(Integer.toString(count));
 
@@ -172,10 +165,11 @@ public class StatusFragment extends Fragment {
             try {
                 YambaClient cloud = new YambaClient("student", "password");
 
+                cloud.postStatus(params[0]);
 
+
+                Log.d(TAG, "Publicado con exito en la red" + params[0]);
                 return "Publicado con exito";
-
-
             } catch (Exception e) {
                 Log.e(TAG, "Error al publicar", e);
                 e.printStackTrace();
@@ -186,10 +180,9 @@ public class StatusFragment extends Fragment {
         @Override
         protected void onPostExecute(String result) {
             progress.dismiss();
-            if ( result != null) {
-                Toast.makeText(getActivity(), result, Toast.LENGTH_LONG).show();
-                mTextStatus.setText("");
-            }
+            if ( result != null)
+                Toast.makeText(getActivity(), result, Toast.LENGTH_LONG)
+                        .show();
         }
 
     }
