@@ -54,17 +54,23 @@ public class StatusFragment extends Fragment {
         mDefaultColor = mTextCount.getTextColors().getDefaultColor();
 
         mButtonTweet.setEnabled(false);
-/*
+
+
+
         mButtonTweet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        String status = mTextStatus.getText().toString();
-        PostTask postTask = new PostTask();
-        postTask.execute(status);
-        Log.d(TAG, "onClicked");
+                Toast.makeText(getActivity(), "pulsaste publicar", Toast.LENGTH_SHORT).show();
+                String status = mTextStatus.getText().toString();
+                PostTask postTask = new PostTask();
+                postTask.execute(status);
+                Log.d(TAG, "onClicked");
+                //InputMethodManager imm = (InputMethodManager) get SystemService(INPUT_METHOD_SERVICE);
+                //imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                mTextStatus.setText("");
             }
         });
-*/
+
 
 
         mTextStatus.addTextChangedListener(new TextWatcher() {
@@ -104,13 +110,19 @@ public class StatusFragment extends Fragment {
         } else {
             mTextCount.setTextColor(mDefaultColor);
         }
-        if(count != 140){
+        if(count != 140 && count > 0){
             mButtonTweet.setEnabled(true);
         } else {
             mButtonTweet.setEnabled(false);
         }
-    }
 
+        if (count < 0){
+            Toast.makeText(getActivity(), "Hay mas de 140 caracteres", Toast.LENGTH_SHORT).show();
+            mButtonTweet.setEnabled(false);
+        }
+
+    }
+/*
     public void clickTweet(View v){
         if (numCaracteres < 0){
             Toast.makeText(getActivity(), "Hay mas de 140 caracteres", Toast.LENGTH_SHORT).show();
@@ -126,7 +138,7 @@ public class StatusFragment extends Fragment {
         }
 
     }
-
+*/
 
     public void textoCambiado(Editable s){
 

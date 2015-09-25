@@ -9,8 +9,7 @@
     <!-- Tweet Button -->
     <Button android:id="@+id/status_button_tweet" android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:text="@string/status_button_tweet"
-        android:layout_alignParentTop="true" android:layout_alignParentRight="true"
-        android:onClick="clickTweet" />
+        android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
 
     <!-- Estado EditText  -->
     <EditText android:id="@+id/status_text" android:layout_width="match_parent"
