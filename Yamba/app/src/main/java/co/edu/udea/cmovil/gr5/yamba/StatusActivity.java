@@ -22,6 +22,8 @@ import com.thenewcircle.yamba.client.YambaClient;
 
 public class StatusActivity extends Activity {
 //instancias
+
+    //prueba github 5:35
     private static String TAG = StatusActivity.class.getSimpleName();
     private Button mButtonTweet;
     private EditText mTextStatus;
