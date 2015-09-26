@@ -69,8 +69,12 @@ public class StatusFragment extends Fragment {
                 PostTask postTask = new PostTask();
                 postTask.execute(status);
                 Log.d(TAG, "onClicked");
-                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                try {
+                    InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
             }
         });
@@ -171,11 +175,9 @@ public class StatusFragment extends Fragment {
         protected String doInBackground(String... params) {
             try {
                 YambaClient cloud = new YambaClient("student", "password");
-
-
+                cloud.postStatus(params[0]);
+                Log.d(TAG, "Publicado con exito en la red" + params[0]);
                 return "Publicado con exito";
-
-
             } catch (Exception e) {
                 Log.e(TAG, "Error al publicar", e);
                 e.printStackTrace();
