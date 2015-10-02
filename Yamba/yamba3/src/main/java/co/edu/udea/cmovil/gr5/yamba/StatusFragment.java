@@ -24,6 +24,8 @@ import com.thenewcircle.yamba.client.YambaClient;
 /**
  * A simple {@link Fragment} subclass.
  */
+
+
 public class StatusFragment extends Fragment {
     //instancias
     private static String TAG = StatusActivity.class.getSimpleName();
@@ -62,14 +64,18 @@ public class StatusFragment extends Fragment {
         mButtonTweet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "pulsaste publicar", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "pulsaste publicar", Toast.LENGTH_SHORT).show();
                 String status = mTextStatus.getText().toString();
                 PostTask postTask = new PostTask();
                 postTask.execute(status);
                 Log.d(TAG, "onClicked");
-                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
-                mTextStatus.setText("");
+                try {
+                    InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
             }
         });
 
@@ -81,6 +87,7 @@ public class StatusFragment extends Fragment {
 
                 numCaracteres = 140 - s.length();
                 cambiaContador(numCaracteres);
+
             }
 
             @Override
@@ -102,8 +109,12 @@ public class StatusFragment extends Fragment {
         return v;
     }
 
+    void limpiaTexto(){
+        mTextStatus.setText("");
+    }
 
-    void cambiaContador(int count){
+
+    private void cambiaContador(int count){
 
         mTextCount.setText(Integer.toString(count));
 
@@ -150,6 +161,7 @@ public class StatusFragment extends Fragment {
 
     class PostTask extends AsyncTask<String, Void, String> {
         private ProgressDialog progress;
+        private boolean publicado =false;
 
         @Override
         protected void onPreExecute() {
@@ -164,15 +176,14 @@ public class StatusFragment extends Fragment {
         protected String doInBackground(String... params) {
             try {
                 YambaClient cloud = new YambaClient("student", "password");
-
                 cloud.postStatus(params[0]);
-
-
                 Log.d(TAG, "Publicado con exito en la red" + params[0]);
+                publicado =true;
                 return "Publicado con exito";
             } catch (Exception e) {
                 Log.e(TAG, "Error al publicar", e);
                 e.printStackTrace();
+                publicado =false;
                 return "Error al publicar";
             }
         }
@@ -180,9 +191,10 @@ public class StatusFragment extends Fragment {
         @Override
         protected void onPostExecute(String result) {
             progress.dismiss();
-            if ( result != null)
-                Toast.makeText(getActivity(), result, Toast.LENGTH_LONG)
-                        .show();
+            if ( result != null) {
+                Toast.makeText(getActivity(), result, Toast.LENGTH_LONG).show();
+                if (publicado) mTextStatus.setText("");
+            }
         }
 
     }

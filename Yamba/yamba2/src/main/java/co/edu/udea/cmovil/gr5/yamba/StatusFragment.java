@@ -161,6 +161,7 @@ public class StatusFragment extends Fragment {
 
     class PostTask extends AsyncTask<String, Void, String> {
         private ProgressDialog progress;
+        private boolean publicado =false;
 
         @Override
         protected void onPreExecute() {
@@ -177,10 +178,12 @@ public class StatusFragment extends Fragment {
                 YambaClient cloud = new YambaClient("student", "password");
                 cloud.postStatus(params[0]);
                 Log.d(TAG, "Publicado con exito en la red" + params[0]);
+                publicado =true;
                 return "Publicado con exito";
             } catch (Exception e) {
                 Log.e(TAG, "Error al publicar", e);
                 e.printStackTrace();
+                publicado =false;
                 return "Error al publicar";
             }
         }
@@ -190,7 +193,7 @@ public class StatusFragment extends Fragment {
             progress.dismiss();
             if ( result != null) {
                 Toast.makeText(getActivity(), result, Toast.LENGTH_LONG).show();
-                mTextStatus.setText("");
+                if (publicado) mTextStatus.setText("");
             }
         }
 
