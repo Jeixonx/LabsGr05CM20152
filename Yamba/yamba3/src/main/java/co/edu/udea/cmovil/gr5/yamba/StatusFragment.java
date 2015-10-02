@@ -71,7 +71,7 @@ public class StatusFragment extends Fragment {
                 Log.d(TAG, "onClicked");
                 try {
                     InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                    imm.hideSoftInputFromWindow(    getActivity().getCurrentFocus().getWindowToken(), 0);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
