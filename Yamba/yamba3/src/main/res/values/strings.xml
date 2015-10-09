@@ -7,17 +7,17 @@
     <string name="tweet">Tweet</string>
     <string name="username">Nombre de usuario</string>
     <string name="password">Contraseña</string>
-    <string name="username_summary">¿Como haces log in?</string>
+    <string name="username_summary">¿Como es tu nombre de usuario?</string>
     <string name="status_update">Actualizacion de estado</string>
-    <string name="password_summary">How do you log in?</string>
+    <string name="password_summary">¿Como haces log in?</string>
     <string name="refresh">Refrescar</string>
     <string name="purge">Purge</string>
     <string name="interval">Intervalo de refresco</string>
     <string name="interval_summary">¿Con que frecuencia se debe refrescar?</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Yamba3-Gr5-Pagina Principal</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Bienvenido a Yamba!</string>
 
 </resources>

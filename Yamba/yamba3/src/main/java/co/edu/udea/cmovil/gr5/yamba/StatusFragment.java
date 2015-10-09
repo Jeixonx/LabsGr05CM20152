@@ -187,7 +187,7 @@ public class StatusFragment extends Fragment {
                 if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
                     getActivity().startActivity(
                             new Intent(getActivity(), SettingsActivity.class));
-                    return "Please update your username and password";
+                    return "Por favor actualice su nombre de usuario y contraseña";
                 }
 
 
