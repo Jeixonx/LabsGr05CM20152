@@ -9,6 +9,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <service android:name=".RefreshService" />
+
         <activity
             android:name=".StatusActivity"
             android:label="@string/app_name" >

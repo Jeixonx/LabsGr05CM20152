@@ -1,6 +1,8 @@
 package co.edu.udea.cmovil.gr5.yamba;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 public class StatusActivity extends SubActivity {
 
@@ -17,6 +19,22 @@ public class StatusActivity extends SubActivity {
                     .add(android.R.id.content, fragment,
                             fragment.getClass().getSimpleName()).commit();
         }
+    }
+
+    // Called when an options item is clicked
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.itemServiceStart:
+                startService(new Intent(this, RefreshService.class));
+                break;
+       //     case R.id.itemPrefs:
+           //     startActivity(new Intent(this, PrefsActivity.class));
+         //       break;
+            default:
+                return false;
+        }
+        return true;
     }
 
 }
