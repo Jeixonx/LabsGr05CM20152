@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.edu.udea.cmovil.gr5.yamba3.StatusFragment">
+
+
+
+
+    <!-- Tweet Button -->
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/status_text_count" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_alignBaseline="@id/status_button_tweet"
+                android:layout_alignBottom="@id/status_button_tweet"
+                android:layout_alignLeft="@id/status_text" android:text="140" />
+
+            <EditText android:id="@+id/status_text" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_below="@+id/status_button_tweet"
+                android:maxLength="140"
+                android:ems="10" android:gravity="top|left" android:hint="@string/status_text_hint"
+                android:inputType="textMultiLine">
+                <requestFocus />
+            </EditText>
+
+            <Button android:id="@+id/status_button_tweet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_button_tweet"
+                android:layout_alignParentTop="true"
+                android:gravity="top|right"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#001cbf"></LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Estado EditText  -->
+
+    <!--TextView del titulo-->
+
+</RelativeLayout>
+<!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba4/src/main/res/layout-land/fragment_status.xml -->
