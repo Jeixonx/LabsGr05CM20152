@@ -9,7 +9,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <service android:name=".RefreshService" />
+
+        <service android:name=".RefreshService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
 
         <activity
             android:name=".StatusActivity"

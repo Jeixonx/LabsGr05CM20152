@@ -3,4 +3,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba3/src/main/res/menu/menu_status.xml -->
+<!-- From: file:/D:/adt-bundle-windows-x86-20140321/Workspace/LabsGr05CM20152/Yamba/yamba3/src/main/res/menu/menu_status.xml -->

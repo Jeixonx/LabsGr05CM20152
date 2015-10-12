@@ -13,5 +13,12 @@
         android:showAsAction="never"
         android:title="@string/action_settings"/>
 
+    <item android:id="@+id/itemPrefs"
+        android:title="@string/titlePrefs"
+        android:icon="@android:drawable/ic_menu_preferences"></item>
+
+    <item android:title="@string/titleRefresh"
+        android:id="@+id/itemServiceStart"
+        android:icon="@android:drawable/ic_menu_rotate"></item>
 </menu>
-<!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba4/src/main/res/menu/menu_main.xml -->
+<!-- From: file:/D:/adt-bundle-windows-x86-20140321/Workspace/LabsGr05CM20152/Yamba/yamba4/src/main/res/menu/menu_main.xml -->

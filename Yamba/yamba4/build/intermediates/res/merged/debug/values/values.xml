@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/array.xml -->
+    <!-- From: file:/D:/adt-bundle-windows-x86-20140321/Workspace/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/array.xml -->
     <eat-comment/>
     <string-array name="interval_names">
         <item>Quince minutos</item>
@@ -18,11 +18,11 @@
         <item>86400000</item>
         <item>0</item>
     </string-array>
-    <!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/dimens.xml -->
+    <!-- From: file:/D:/adt-bundle-windows-x86-20140321/Workspace/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/adt-bundle-windows-x86-20140321/Workspace/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Ajustes</string>
     <string name="app_name">Yamba3-Gr5</string>
@@ -37,11 +37,13 @@
     <string name="status_button_tweet">Publicar</string>
     <string name="status_text_hint">¿Que hay de nuevo?</string>
     <string name="status_update">Actualizacion de estado</string>
+    <string name="titlePrefs">Preferencias</string>
+    <string name="titleRefresh">Refrescar</string>
     <string name="title_activity_main">Yamba3-Gr5-Pagina Principal</string>
     <string name="tweet">Tweet</string>
     <string name="username">Nombre de usuario</string>
     <string name="username_summary">¿Como es tu nombre de usuario?</string>
-    <!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/adt-bundle-windows-x86-20140321/Workspace/LabsGr05CM20152/Yamba/yamba4/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->

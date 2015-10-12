@@ -38,11 +38,12 @@ public class MainActivity extends Activity {
             case R.id.action_tweet:
                 startActivity(new Intent("com.marakana.android.yamba.action.tweet"));
                 return true;
+            case R.id.action_refresh:
+                startService(new Intent(this, RefreshService.class));
+                return true;
             default:
+                return false;
         }
 
-        //noinspection SimplifiableIfStatement
-
-        return super.onOptionsItemSelected(item);
     }
 }

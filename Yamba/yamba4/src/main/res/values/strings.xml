@@ -17,7 +17,7 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_main">Yamba3-Gr5-Pagina Principal</string>
+    <string name="title_activity_main">Yamba3-Gr5</string>
     <string name="hello_world">Bienvenido a Yamba!</string>
     <string name="titlePrefs">Preferencias</string>
     <string name="titleRefresh">Refrescar</string>

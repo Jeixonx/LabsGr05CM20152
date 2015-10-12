@@ -4,6 +4,8 @@ int dimen activity_horizontal_margin 0x7f060000
 int dimen activity_vertical_margin 0x7f060001
 int id action_settings 0x7f0a0004
 int id action_tweet 0x7f0a0003
+int id itemPrefs 0x7f0a0005
+int id itemServiceStart 0x7f0a0006
 int id status_button_tweet 0x7f0a0000
 int id status_text 0x7f0a0001
 int id status_text_count 0x7f0a0002
@@ -26,9 +28,11 @@ int string refresh 0x7f080009
 int string status_button_tweet 0x7f08000a
 int string status_text_hint 0x7f08000b
 int string status_update 0x7f08000c
-int string title_activity_main 0x7f08000d
-int string tweet 0x7f08000e
-int string username 0x7f08000f
-int string username_summary 0x7f080010
+int string titlePrefs 0x7f08000d
+int string titleRefresh 0x7f08000e
+int string title_activity_main 0x7f08000f
+int string tweet 0x7f080010
+int string username 0x7f080011
+int string username_summary 0x7f080012
 int style AppTheme 0x7f050000
 int xml settings 0x7f040000

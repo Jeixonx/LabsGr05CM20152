@@ -21,6 +21,8 @@ public final class R {
     public static final class id {
         public static final int action_settings=0x7f0a0004;
         public static final int action_tweet=0x7f0a0003;
+        public static final int itemPrefs=0x7f0a0005;
+        public static final int itemServiceStart=0x7f0a0006;
         public static final int status_button_tweet=0x7f0a0000;
         public static final int status_text=0x7f0a0001;
         public static final int status_text_count=0x7f0a0002;
@@ -51,10 +53,12 @@ public final class R {
         public static final int status_button_tweet=0x7f08000a;
         public static final int status_text_hint=0x7f08000b;
         public static final int status_update=0x7f08000c;
-        public static final int title_activity_main=0x7f08000d;
-        public static final int tweet=0x7f08000e;
-        public static final int username=0x7f08000f;
-        public static final int username_summary=0x7f080010;
+        public static final int titlePrefs=0x7f08000d;
+        public static final int titleRefresh=0x7f08000e;
+        public static final int title_activity_main=0x7f08000f;
+        public static final int tweet=0x7f080010;
+        public static final int username=0x7f080011;
+        public static final int username_summary=0x7f080012;
     }
     public static final class style {
         /**  Customize your theme here. 

@@ -21,20 +21,4 @@ public class StatusActivity extends SubActivity {
         }
     }
 
-    // Called when an options item is clicked
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.itemServiceStart:
-                startService(new Intent(this, RefreshService.class));
-                break;
-       //     case R.id.itemPrefs:
-           //     startActivity(new Intent(this, PrefsActivity.class));
-         //       break;
-            default:
-                return false;
-        }
-        return true;
-    }
-
 }

@@ -27,4 +27,4 @@
         android:layout_alignLeft="@id/status_text" android:text="140" />
 
 </RelativeLayout>
-<!-- From: file:/home/telematica/AndroidStudioProjects/LabsGr05CM20152/Yamba/yamba3/src/main/res/layout/fragment_status.xml -->
+<!-- From: file:/D:/adt-bundle-windows-x86-20140321/Workspace/LabsGr05CM20152/Yamba/yamba3/src/main/res/layout/fragment_status.xml -->

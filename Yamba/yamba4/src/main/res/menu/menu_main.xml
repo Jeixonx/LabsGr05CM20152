@@ -13,11 +13,15 @@
         android:showAsAction="never"
         android:title="@string/action_settings"/>
 
+    <item android:title="@string/titleRefresh"
+        android:id="@+id/action_refresh"
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_rotate"></item>
+
+
     <item android:id="@+id/itemPrefs"
         android:title="@string/titlePrefs"
+        android:showAsAction="always"
         android:icon="@android:drawable/ic_menu_preferences"></item>
 
-    <item android:title="@string/titleRefresh"
-        android:id="@+id/itemServiceStart"
-        android:icon="@android:drawable/ic_menu_rotate"></item>
 </menu>
