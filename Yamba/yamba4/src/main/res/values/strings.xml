@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Yamba3-Gr5</string>
+    <string name="app_name">Yamba4-Gr5</string>
     <string name="action_settings">Ajustes</string>
     <string name="status_button_tweet">Publicar</string>
     <string name="status_text_hint">¿Que hay de nuevo?</string>
@@ -17,7 +17,7 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_main">Yamba3-Gr5</string>
+    <string name="title_activity_main">Yamba4-Gr5</string>
     <string name="hello_world">Bienvenido a Yamba!</string>
     <string name="titlePrefs">Preferencias</string>
     <string name="titleRefresh">Refrescar</string>

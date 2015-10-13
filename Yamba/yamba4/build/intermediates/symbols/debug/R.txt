@@ -2,10 +2,10 @@ int array interval_names 0x7f070000
 int array interval_values 0x7f070001
 int dimen activity_horizontal_margin 0x7f060000
 int dimen activity_vertical_margin 0x7f060001
+int id action_refresh 0x7f0a0005
 int id action_settings 0x7f0a0004
 int id action_tweet 0x7f0a0003
-int id itemPrefs 0x7f0a0005
-int id itemServiceStart 0x7f0a0006
+int id itemPrefs 0x7f0a0006
 int id status_button_tweet 0x7f0a0000
 int id status_text 0x7f0a0001
 int id status_text_count 0x7f0a0002

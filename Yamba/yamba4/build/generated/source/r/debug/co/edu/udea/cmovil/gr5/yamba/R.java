@@ -19,10 +19,10 @@ public final class R {
         public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class id {
+        public static final int action_refresh=0x7f0a0005;
         public static final int action_settings=0x7f0a0004;
         public static final int action_tweet=0x7f0a0003;
-        public static final int itemPrefs=0x7f0a0005;
-        public static final int itemServiceStart=0x7f0a0006;
+        public static final int itemPrefs=0x7f0a0006;
         public static final int status_button_tweet=0x7f0a0000;
         public static final int status_text=0x7f0a0001;
         public static final int status_text_count=0x7f0a0002;
