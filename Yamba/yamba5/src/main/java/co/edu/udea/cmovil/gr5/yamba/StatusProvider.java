@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.net.wifi.WifiConfiguration;
+import android.text.TextUtils;
 import android.util.Log;
 
 public class StatusProvider extends ContentProvider {
@@ -75,6 +76,37 @@ public class StatusProvider extends ContentProvider {
     }
 
     @Override
+    public int update(Uri uri, ContentValues values, String selection,
+                      String[] selectionArgs) {
+        String where;
+        switch (sURIMatcher.match(uri)){
+            case StatusContract.STATUS_DIR:
+                where = selection;
+                break;
+            case StatusContract.STATUS_ITEM:
+                long id = ContentUris.parseId(uri);
+                where = StatusContract.Column.ID
+                        + "="
+                        + id
+                        + (TextUtils.isEmpty(selection) ? "" : " and ("
+                        + selection + ")");
+                break;
+            default:
+                throw new IllegalArgumentException("Illegal uri: " + uri);
+        }
+        SQLiteDatabase db = dbhelper.getWritableDatabase();
+        int ret = db.update(StatusContract.TABLE, values,
+                where, selectionArgs); //actualiza
+        if(ret>0){
+            // informa que la información para esta URI ha cambiado
+            getContext().getContentResolver().notifyChange(uri, null);
+        }
+        Log.d(TAG, "updated records: " + ret);
+        return ret;
+    }
+
+
+    @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         // Implement this to handle requests to delete one or more rows.
         throw new UnsupportedOperationException("Not yet implemented");
@@ -92,10 +124,5 @@ public class StatusProvider extends ContentProvider {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
-    @Override
-    public int update(Uri uri, ContentValues values, String selection,
-                      String[] selectionArgs) {
-        // TODO: Implement this to handle requests to update one or more rows.
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+
 }
