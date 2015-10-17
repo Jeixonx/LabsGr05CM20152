@@ -1,6 +1,7 @@
 package co.edu.udea.cmovil.gr5.yamba;
 
 import android.content.ContentProvider;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
@@ -65,6 +66,7 @@ public class StatusProvider extends ContentProvider {
         //explicar estas lineas
         if(rowId != -1){
             long id = values.getAsLong(StatusContract.Column.ID);
+            ret = ContentUris.withAppendedId(uri, id);
             Log.d(TAG, "inserted uri: "+ ret);
             // Notificar que la informacion para esta uri ha cambiado
             getContext().getContentResolver().notifyChange(uri, null);
